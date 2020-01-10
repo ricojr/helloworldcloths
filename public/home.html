@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <p>You are logged in!</p>
+    <h1>Hana was hier</h1>
 
     <script>
-      firebase.auth.onAuthStateChanged(user => {
-        if (user) {
-          windows.location.href = 'login.html';
-        }
-      });
+        firebase.auth.onAuthStateChanged(user => {
+            if (user) {
+                windows.location.href = 'login.html';
+            }
+        });
     </script>
-  </body>
+</body>
+
 </html>
