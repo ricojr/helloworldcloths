@@ -1,1 +1,5 @@
+#dependency caches
 node_modules
+
+#ignore all logs
+**/logs
