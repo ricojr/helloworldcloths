@@ -14,19 +14,35 @@
     />
   </head>
   <body>
-    <h4>Log in</h4>
-    <form>
-      <div>
-        <lable for="signup-email">Email</lable>
-        <input type="email" id="email" />
-      </div>
-      <div>
-        <lable for="signup-password">Password</lable>
-        <input type="password" id="password" />
-      </div>
-      <button id="btn-login" type="button">Log in</button>
-    </form>
+    <div>
+      <h4>Log in</h4>
+      <form id="login-form">
+        <div>
+          <lable for="login-email">Email</lable>
+          <input type="email" id="login-email" />
+        </div>
+        <div>
+          <lable for="login-password">Password</lable>
+          <input type="password" id="login-password" />
+        </div>
+        <button id="btn-login" type="button">Log in</button>
+      </form>
+    </div>
 
+    <div>
+      <h4>Sign Up</h4>
+      <form id="signup-form">
+        <div>
+          <lable for="signup-email">Email</lable>
+          <input type="email" id="signup-email" />
+        </div>
+        <div>
+          <lable for="signup-password">Password</lable>
+          <input type="password" id="signup-password" />
+        </div>
+        <button id="btn-signup" type="button">Sign up</button>
+      </form>
+    </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.6.1/firebase-app.js"></script>
     <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
@@ -34,20 +50,10 @@
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
     <script>
-      //make auth and firestore refrence
+      //make auth and firestore reference
       const auth = firebase.auth();
       const db = firebase.firestore();
-
-      //update firestore settings
-      db.settings({ timestampsSnapshots: true });
     </script>
-    <script src="./javascripts/index.js"></script>
-    <!-- <script>
-      firebase.auth.onAuthStateChanged(function(user) {
-        if (user) {
-          windows.location.href = 'home.html';
-        }
-      });
-    </script> -->
+    <script src="javascripts/auth.js"></script>
   </body>
 </html>
