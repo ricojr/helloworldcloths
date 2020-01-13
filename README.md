@@ -9,9 +9,11 @@ Webshop for Web Development merchandise.
 ### Prerequisites
 
 ```
+NPM
 Node.js
 Express
 Nodemon
+EJS
 ```
 
 ## Deployment
