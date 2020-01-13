@@ -1,12 +1,354 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+:root {
+    --mainBlue: #1976D2;
+    --mainYellow: rgb(102, 212, 226);
+    --mainWhite: #FFFFFF;
+    --mainBlack: #212121;
+    --yellowTrans: rgba(12, 89, 141, 0.74);
+    --mainGrey: rgb(52, 108, 160);
+}
+
 body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-family: 'Baskervville', serif;
+    background: var(--mainWhite);
+    color: var(--mainBlack);
 }
 
-a {
-  color: #00b7ff;
+
+/* nav links */
+
+.navbar-toggler {
+    outline: none !important;
 }
 
-h4 {
-  color: red;
+.toggler-icon {
+    font-size: 2.5rem;
+    color: var(--mainBlue);
+}
+
+.nav-link {
+    color: var(--mainBlue);
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--mainBlack);
+}
+
+
+/* end of nav links */
+
+.cart-info {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+.cart-info:hover {
+    background: var(--mainBlue);
+    border-color: var(--mainBlue);
+    color: var(--mainWhite);
+}
+
+.cart-info:hover .cart-info__icon {
+    color: var(--mainWhite);
+}
+
+
+/* end of info icons */
+
+
+/* banner */
+
+.max-height {
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url("https://images.unsplash.com/photo-1568658176307-bfbd2873abda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") center/cover fixed no-repeat;
+    position: relative;
+}
+
+.banner {
+    color: var(--mainWhite);
+    margin-top: -4rem;
+}
+
+.banner-title {
+    color: var(--mainBlue);
+    font-size: 4rem;
+}
+
+.banner-link {
+    font-size: 1.5rem;
+    color: var(--mainBlack);
+    border: 0.2rem solid var(--mainBlack);
+}
+
+.banner-link:hover {
+    background: var(--mainBlack);
+    color: var(--mainBlue);
+}
+
+
+/* endo of banner */
+
+
+/* cart item */
+
+.cart-item-remove {
+    color: var(--mainBlue);
+    transition: all 1s ease-in-out;
+}
+
+.cart-item-remove:hover {
+    transform: scale(1.1);
+    color: var(--mainBlack);
+}
+
+#cart-item-price {
+    font-size: 0.8rem;
+}
+
+
+/* cart item */
+
+
+/* cart buttons */
+
+.btn-pink {
+    color: var(--mainBlue) !important;
+    border-color: var(--mainBlue) !important;
+}
+
+.btn-black {
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+}
+
+.btn-black:hover {
+    color: var(--mainBlue) !important;
+    background: var(--mainBlack) !important;
+}
+
+.btn-pink:hover {
+    background: var(--mainBlue) !important;
+    color: var(--mainBlack) !important;
+}
+
+
+/* end of cart buttons */
+
+
+/* about */
+
+.about-img__container {
+    position: relative;
+}
+
+.about-img__container::before {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid var(--mainYellow);
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.about-img__container:hover:before {
+    top: 0;
+    left: 0;
+}
+
+
+/* store items */
+
+.store {
+    background: var(--mainGrey);
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.store-img {
+    transition: all 1s ease-in-out;
+}
+
+.img-container:hover .store-img {
+    transform: scale(1.2);
+}
+
+.store-item-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: var(--mainYellow);
+    border-top-left-radius: 1rem;
+    transition: all 1s ease-in-out;
+    transform: translate(100%, 100%);
+}
+
+.img-container:hover .store-item-icon {
+    transform: translate(0, 0);
+}
+
+.store-item-icon:hover {
+    color: var(--mainWhite);
+}
+
+.store-item-value {
+    color: --mainYellow;
+}
+
+
+/*end of  store items */
+
+.search-box {
+    background: var(--mainBlue);
+    color: var(--mainBlack);
+}
+
+
+/* ligthbox */
+
+.lightbox-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6) !important;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.lightbox-close {
+    color: var(--mainBlue);
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: var(--mainYellow);
+}
+
+.lightbox-control {
+    position: absolute;
+    font-size: 4rem;
+    color: var(--mainBlue);
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+.lightbox-control:hover {
+    color: var(--mainYellow);
+}
+
+.btnLeft {
+    top: 50%;
+    left: 0;
+    transform: translateX(-60%);
+}
+
+.btnRight {
+    top: 50%;
+    right: 0;
+    transform: translateX(60%);
+}
+
+.counter {
+    background-image: url('https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80');
+    /* background-color: rgb(25, 67, 122); */
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    border-radius: 50px solid blue;
+}
+
+.outer-div {
+    height: 350px;
+    overflow: hidden
+}
+
+.inner-div1 {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    background-image: url(../img/for-men.jpg)
+}
+
+.inner-div1:hover {
+    transform: scale(1.2)
+}
+
+.inner-div2 {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    background-image: url(../img/for-women.jpg)
+}
+
+.inner-div2:hover {
+    transform: scale(1.2)
+}
+
+.zoom-box-text {
+    text-align: center;
+    line-height: 300px;
+}
+
+.zoom-box-text {
+    color: white;
+}
+
+.product-general {
+    background-color: cadetblue;
+    padding-top: 20px;
+}
+
+.product-card .card-title {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.product-card .card-text {
+    font-size: 16px
+}
+
+.product-card:before {
+    content: "\f217";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: deeppink;
+    font-size: 20px;
+    padding-right: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.img-fluid {
+    display: flex;
+}
+
+.main {
+    background-color: rgb(68, 83, 83);
 }
