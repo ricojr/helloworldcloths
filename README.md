@@ -26,6 +26,7 @@ Nodemon
 * [Bootstrap](http://www.dropwizard.io/1.0.2/docs/) - CSS Framework CDN
 * [Node.js](https://nodejs.org/en/docs/guides/) - Sever side language
 * [Express.js](https://www.npmjs.com/package/express) - Node framawork
+* [EJS](https://ejs.co/) - Embedded JavaScript templating.
 * [NPM](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
