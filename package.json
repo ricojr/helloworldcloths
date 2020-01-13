@@ -7,10 +7,11 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "debu": "0.0.1-security",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
     "firebase-tools": "^7.11.0",
-    "http-errors": "~1.6.3",
+    "http-errors": "^1.7.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "pug": "^2.0.4"
