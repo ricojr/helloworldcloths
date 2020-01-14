@@ -1,17 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Baskervville|Open+Sans|Roboto&display=swap');
 :root {
-    --mainBlue: #1976D2;
+    --mainBlue: #15343f;
+    --secondBlue: #46a3c2;
     --mainYellow: rgb(102, 212, 226);
     --mainWhite: #FFFFFF;
     --mainBlack: #212121;
-    --yellowTrans: rgba(12, 89, 141, 0.74);
+    --mainPurple: #E040FB;
     --mainGrey: rgb(52, 108, 160);
 }
 
 body {
     font-family: 'Baskervville', serif;
-    background: var(--mainWhite);
+    /* background: var(--mainWhite); */
     color: var(--mainBlack);
+    overflow: hidden;
 }
 
 
@@ -28,44 +30,23 @@ body {
 
 .nav-link {
     color: var(--mainBlue);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: all 0.5s ease-in-out;
 }
 
 .nav-link:hover {
-    color: var(--mainBlack);
+    color: var(--mainPurple);
 }
 
 
 /* end of nav links */
-
-.cart-info {
-    border: 0.1rem solid var(--mainBlack);
-    color: var(--mainBlack);
-    border-radius: 0.25rem;
-    padding: 0.4rem 0.6rem;
-    cursor: pointer;
-}
-
-.cart-info:hover {
-    background: var(--mainBlue);
-    border-color: var(--mainBlue);
-    color: var(--mainWhite);
-}
-
-.cart-info:hover .cart-info__icon {
-    color: var(--mainWhite);
-}
-
-
-/* end of info icons */
 
 
 /* banner */
 
 .max-height {
     min-height: calc(100vh - 76px);
-    background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url("https://images.unsplash.com/photo-1568658176307-bfbd2873abda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") center/cover fixed no-repeat;
+    background: url("https://images.unsplash.com/photo-1568658176307-bfbd2873abda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") center/cover fixed no-repeat;
     position: relative;
 }
 
@@ -75,8 +56,8 @@ body {
 }
 
 .banner-title {
-    color: var(--mainBlue);
-    font-size: 4rem;
+    color: var(--secondBlue);
+    font-size: 3rem;
 }
 
 .banner-link {
@@ -89,32 +70,6 @@ body {
     background: var(--mainBlack);
     color: var(--mainBlue);
 }
-
-
-/* endo of banner */
-
-
-/* cart item */
-
-.cart-item-remove {
-    color: var(--mainBlue);
-    transition: all 1s ease-in-out;
-}
-
-.cart-item-remove:hover {
-    transform: scale(1.1);
-    color: var(--mainBlack);
-}
-
-#cart-item-price {
-    font-size: 0.8rem;
-}
-
-
-/* cart item */
-
-
-/* cart buttons */
 
 .btn-pink {
     color: var(--mainBlue) !important;
@@ -136,6 +91,12 @@ body {
     color: var(--mainBlack) !important;
 }
 
+.btn:hover {
+    border: 1px solid transparent;
+    background: #46a3c2;
+    color: #15343f;
+}
+
 
 /* end of cart buttons */
 
@@ -153,7 +114,7 @@ body {
     left: -1.7rem;
     width: 100%;
     height: 100%;
-    outline: 0.5rem solid var(--mainYellow);
+    outline: 0.5rem solid var(--thirdBlue);
     z-index: -1;
     transition: all 1s ease-in-out;
 }
@@ -176,43 +137,12 @@ body {
     cursor: pointer;
 }
 
-.store-img {
-    transition: all 1s ease-in-out;
-}
-
-.img-container:hover .store-img {
-    transform: scale(1.2);
-}
-
-.store-item-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0.75rem;
-    background: var(--mainYellow);
-    border-top-left-radius: 1rem;
-    transition: all 1s ease-in-out;
-    transform: translate(100%, 100%);
-}
-
-.img-container:hover .store-item-icon {
-    transform: translate(0, 0);
-}
-
-.store-item-icon:hover {
-    color: var(--mainWhite);
-}
-
-.store-item-value {
-    color: --mainYellow;
-}
-
 
 /*end of  store items */
 
 .search-box {
-    background: var(--mainBlue);
-    color: var(--mainBlack);
+    background: var(--secondBlue);
+    color: var(--secondBlue);
 }
 
 
@@ -318,8 +248,10 @@ body {
 }
 
 .product-general {
-    background-color: cadetblue;
+    background-color: #15343f;
     padding-top: 20px;
+    width: 100vw;
+    height: 100vw;
 }
 
 .product-card .card-title {
