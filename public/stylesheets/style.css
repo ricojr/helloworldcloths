@@ -13,7 +13,7 @@ body {
     font-family: 'Baskervville', serif;
     /* background: var(--mainWhite); */
     color: var(--mainBlack);
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 
@@ -128,7 +128,7 @@ body {
 /* store items */
 
 .store {
-    background: var(--mainGrey);
+    background: white;
 }
 
 .img-container {
@@ -199,12 +199,15 @@ body {
 }
 
 .counter {
-    background-image: url('https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80');
-    /* background-color: rgb(25, 67, 122); */
+    /*background-image: url('https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80');
+    /* background-color: rgb(25, 67, 122); 
     background-attachment: fixed;
     background-size: cover;
     color: white;
     border-radius: 50px solid blue;
+    */
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80') no-repeat center/cover;
 }
 
 .outer-div {
@@ -248,10 +251,8 @@ body {
 }
 
 .product-general {
-    background-color: #15343f;
+    background-color: white;
     padding-top: 20px;
-    width: 100vw;
-    height: 100vw;
 }
 
 .product-card .card-title {
