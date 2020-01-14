@@ -73,33 +73,32 @@
         }
         
         #author a {
-            color: rgb(15, 44, 138);
+            color: #FFFFFF;
             text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-    <!-- header -->
-    <header class="header" style="background-color: cornsilk;">
+    <header>
         <!-- navbar  -->
-        <nav class="navbar navbar-expand-lg px-4">
-            <a class="navbar-brand" href="#"><img alt="" src="img/logo.svg" style="width: 50px; height: 50px;" /></a>
+        <nav class="navbar navbar-expand-lg navbar-light px-4">
+            <a class="navbar-brand" href="#"><img alt="logo" src="img/logo.svg" style="width: 15px; height: 15px;"></a>
             <button class="navbar-toggler" data-target="#myNav" data-toggle="collapse" type="button">
-          <span class="toggler-icon">
-            <i class="fas fa-bars"></i>
-          </span>
-        </button>
-            <div class="collapse navbar-collapse" id="myNav">
-                <ul class="navbar-nav m-auto text-capitalize">
-                    <li class="nav-item active mx-lg-5">
-                        <a class="nav-link" href="1-index.html">HOME</a>
+                <span class="toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse navbar-light" id="myNav">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item active mx-lg-4">
+                        <a class="nav-link" href="1-index.html">Home</a>
                     </li>
-                    <li class="nav-item mx-lg-5">
-                        <a class="nav-link " href="2-product.html">STORE</a>
+                    <li class="nav-item mx-lg-4">
+                        <a class="nav-link " href="2-product-men.html">Store</a>
                     </li>
-                    <li class="nav-item mx-lg-5">
-                        <a class="nav-link" href="7-contact.html">CONTACT</a>
+                    <li class="nav-item mx-lg-4">
+                        <a class="nav-link" href="7-contact.html">Contact</a>
                     </li>
                 </ul>
                 <!-- info in the left -->
@@ -107,43 +106,35 @@
                     <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="btn btn-md btn-danger text-light ml-5" href="6-cart.html">
-                                    <i aria-hidden="true" class="fa fa-cart-arrow-down"></i> Add To Cart</a>
+                                <a class="btn btn-sm rounded-pill ml-6" href="6-cart.html">
+                                    <i aria-hidden="true" class="fa fa-cart-arrow-down"></i> Your Cart</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="nav-info align-items-center d-flex justify-content-between mx-md-6">
-                        <span class="signin-info_icon mx-md-3">
-                <a
-                  class="btn btn-md btn-info text-light ml-5"
-                  href="5-sign_up_form.html"
-                  >Log in</a
-                >
-                <!-- <i class="fas fa-sign-in"></i> -->
-              </span>
+                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-info rounded-pill text-light ml-6" href="4-sign-in.html">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="nav-info align-items-center d-flex justify-content-between mx-md-6">
-                        <span class="signin-info_icon mx-md-3">
-                <a
-                  class="btn btn-md btn-success text-light ml-5"
-                  href="5-sign_up_form.html"
-                  >Join free</a
-                >
-                <!-- <i class="fas fa-sign-in"></i> -->
-              </span>
+                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-danger rounded-pill text-light ml-6" href="5-sign-up.html">
+                                    <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Sign Up</a>
+                            </li>
+                        </ul>
                     </div>
                     <!-- end info in the left -->
                 </div>
             </div>
         </nav>
         <!-- end of nav -->
-        <!-- banner  -->
-
-        <!--end of  banner  -->
     </header>
-    <!-- header -->
-    <section class="about py-5" id="about">
-        <div class="container">
+    <section class=" py-5" id="about">
+        <div class="product-general">
             <div class="row">
                 <div class="col-10 mx-auto col-md-6 my-5">
                     <h1 class="text-capitalize">
@@ -272,26 +263,21 @@
                     <i class="fa fa-envelope mt-3"></i>
                     <a href="">awesome_team@helloworldwinkel.be</a><br />
                     <i class="fas fa-globe mt-3"></i> Kon. Astridlaan 185, 9000 Gent
-                    <br />
-                    <div class="my-4">
-                        <a href=""><i class="fab fa-facebook fa-2x pr-4"></i></a>
-                        <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
         </div>
         </div>
 
-        <div class="row text-center bg-success text-white" id="author">
+        <!-- <div class="row text-center text-white" id="author">
             <div class="col-12 mt-4 h3 ">
                 <a href="#">@HW Team</a>
             </div>
             <div class="col-12 my-2">
-                <a href="https://www.helloworlwinkel.be" target="_blank"><i class="fab fa-globe fa-1x"></i
+                <a href="https://www.helloworldwinkel.be" target="_blank"><i class="fab fa-globe fa-1x"></i
           ></a>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- bootstrap js -->

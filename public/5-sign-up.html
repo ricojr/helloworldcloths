@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="#" rel="apple-touch-icon" sizes="180x180" />
+    <link href="#" rel="icon" sizes="32x32" type="image/png" />
+    <link href="#" rel="icon" sizes="16x16" type="image/png" />
+    <link href="#" rel="manifest" />
+    <link color="#563d7c" href="#" rel="mask-icon" />
+    <link href="#" rel="icon" />
+    <!-- main css -->
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link href="stylesheets/all.css" rel="stylesheet" />
+    <link href="stylesheets/counter.css" rel="stylesheet" />
+    <style>
+        /* .product-general {
+            width: 100%;
+            height: auto;
+            background: -webkit-linear-gradient(0deg, #3c96ff 0%, #2dceff 100%);
+            font-family: 'Bree Serif', serif;
+            font-size: 17px;
+        } */
+        
+        #logreg-forms {
+            width: 412px;
+            margin: 10vh auto;
+            background-color: #46a3c2;
+            box-shadow: 0 7px 7px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        #logreg-forms form {
+            width: 100%;
+            max-width: 410px;
+            padding: 15px;
+            margin: auto;
+        }
+        
+        #logreg-forms .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        #logreg-forms .form-control:focus {
+            z-index: 2;
+        }
+        
+        #logreg-forms .form-signin input[type='email'] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        #logreg-forms .form-signin input[type='password'] {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        
+        #logreg-forms .social-login {
+            width: 390px;
+            margin: 0 auto;
+            margin-bottom: 14px;
+        }
+        
+        #logreg-forms .social-btn {
+            font-weight: 100;
+            color: white;
+            width: 190px;
+            font-size: 0.9rem;
+        }
+        
+        #logreg-forms a {
+            display: block;
+            padding-top: 10px;
+            color: #fff;
+        }
+        
+        #logreg-form .lines {
+            width: 200px;
+            border: 1px solid red;
+        }
+        
+        #logreg-forms button[type='submit'] {
+            margin-top: 10px;
+        }
+        
+        #logreg-forms .facebook-btn {
+            background-color: #3c589c;
+        }
+        
+        #logreg-forms .google-btn {
+            background-color: #df4b3b;
+        }
+        
+        #logreg-forms .form-reset,
+        #logreg-forms .form-signup {
+            display: none;
+        }
+        
+        #logreg-forms .form-signup .social-btn {
+            width: 210px;
+        }
+        
+        #logreg-forms .form-signup input {
+            margin-bottom: 2px;
+        }
+        
+        .form-signup .social-login {
+            width: 210px !important;
+            margin: 0 auto;
+        }
+        
+        .submit {
+            background: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+            border-radius: 25px;
+            color: #fff;
+        }
+        /* Mobile */
+        
+        @media screen and (max-width: 500px) {
+            #logreg-forms {
+                width: 300px;
+            }
+            #logreg-forms .social-login {
+                width: 200px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+            #logreg-forms .social-btn {
+                font-size: 1.3rem;
+                font-weight: 100;
+                color: white;
+                width: 200px;
+                height: 56px;
+            }
+            #logreg-forms .social-btn:nth-child(1) {
+                margin-bottom: 5px;
+            }
+            #logreg-forms .social-btn span {
+                display: none;
+            }
+            #logreg-forms .facebook-btn:after {
+                content: 'Facebook';
+            }
+            #logreg-forms .google-btn:after {
+                content: 'Google+';
+            }
+        }
+    </style>
+
+    <title>HWwinkerSignUp</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- navbar  -->
+        <nav class="navbar navbar-expand-lg navbar-light px-4">
+            <a class="navbar-brand" href="#"><img alt="logo" src="img/logo.svg" style="width: 15px; height: 15px;"></a>
+            <button class="navbar-toggler" data-target="#myNav" data-toggle="collapse" type="button">
+                    <span class="toggler-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+            <div class="collapse navbar-collapse navbar-light" id="myNav">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item active mx-lg-4">
+                        <a class="nav-link" href="1-index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-4">
+                        <a class="nav-link " href="2-product-men.html">Store</a>
+                    </li>
+                    <li class="nav-item mx-lg-4">
+                        <a class="nav-link" href="7-contact.html">Contact</a>
+                    </li>
+                </ul>
+                <!-- info in the left -->
+                <div class="nav-info-items d-none d-md-flex ">
+                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-info rounded-pill ml-6" href="6-cart.html">
+                                    <i aria-hidden="true" class="fa fa-cart-arrow-down"></i> Your Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-info rounded-pill text-light ml-6" href="4-sign-in.html">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>Sign in</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-danger rounded-pill text-light ml-6" href="5-sign-up.html">
+                                    <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end info in the left -->
+                </div>
+            </div>
+        </nav>
+        <!-- end of nav -->
+    </header>
+    <!-- header -->
+    <main class="product-general">
+        <div id="logreg-forms">
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Sign Up</h1>
+                <div class="social-login">
+                    <button class="btn facebook-btn social-btn" type="button">
+                        <span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span>
+                    </button>
+                    <button class="btn google-btn social-btn" type="button">
+                        <span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span>
+                    </button>
+                </div>
+                <p style="text-align:center">OR</p>
+                <form action="#" class="form-signup">
+                    <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="" />
+                    <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="" />
+                    <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" />
+                    <input type="password" id="user-repeatpass" class="form-control" placeholder="Confirm Password" required autofocus="" />
+                    <div class="input-group">
+                        <button class="btn btn-md btn-block submit" type="submit">
+                            <i class="fas fa-user-plus"></i> Sign up new account
+                        </button>
+                    </div>
+                    <hr />
+                </form>
+            </form>
+        </div>
+    </main>
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="javascripts/counter.js"></script>
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/login.js"></script>
+</body>
+
+</html>
