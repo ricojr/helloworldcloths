@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +14,15 @@
     <!-- font awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Favicons -->
-    <link href="#" rel="apple-touch-icon" sizes="180x180" />
+    <!-- <link href="#" rel="apple-touch-icon" sizes="180x180" />
     <link href="#" rel="icon" sizes="32x32" type="image/png" />
     <link href="#" rel="icon" sizes="16x16" type="image/png" />
     <link href="#" rel="manifest" />
     <link color="#563d7c" href="#" rel="mask-icon" />
-    <link href="#" rel="icon" />
+    <link href="#" rel="icon" /> -->
     <!-- main css -->
     <link href="stylesheets/style.css" rel="stylesheet" />
-    <link href="stylesheets/all.css" rel="stylesheet" />
-    <link href="stylesheets/counter.css" rel="stylesheet" />
+    
     <style>
         /* .product-general {
             width: 100%;
@@ -231,30 +233,61 @@
                         <span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span>
                     </button>
                 </div>
+            </form>
                 <p style="text-align:center">OR</p>
-                <form action="#" class="form-signup">
-                    <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="" />
-                    <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="" />
-                    <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" />
-                    <input type="password" id="user-repeatpass" class="form-control" placeholder="Confirm Password" required autofocus="" />
+                <form id="form-signup">
+                    <input type="text" id="name" class="form-control" placeholder="Full name" required />
+                    <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus="" />
+                    <input type="password" id="password" class="form-control" placeholder="Password" required autofocus="" />
+                    <input type="password" id="repeat-password" class="form-control" placeholder="Confirm Password" required autofocus="" />
                     <div class="input-group">
-                        <button class="btn btn-md btn-block submit" type="submit">
+                        <button class="btn btn-md btn-block submit" id="submit" type="submit">
                             <i class="fas fa-user-plus"></i> Sign up new account
                         </button>
                     </div>
                     <hr />
                 </form>
-            </form>
+           
         </div>
     </main>
 
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQjj4Tm0tDFYgjAucFxrLJ0RRGrM-Qhq0",
+    authDomain: "helloworldtest-e4deb.firebaseapp.com",
+    databaseURL: "https://helloworldtest-e4deb.firebaseio.com",
+    projectId: "helloworldtest-e4deb",
+    
+    appId: "1:222966073974:web:2b29e80dd12900bd162d57",
+    measurementId: "G-56TWC4FKN4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  // make auth and firestore reference
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // update firestore settings
+  db.settings({});
+</script>
     <!-- bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="javascripts/counter.js"></script>
-    <script src="javascripts/app.js"></script>
-    <script src="javascripts/login.js"></script>
+    <script src="javascripts/auth.js"></script>
+   
 </body>
 
 </html>
