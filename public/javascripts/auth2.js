@@ -1,3 +1,13 @@
+// listen for auth status
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('user logged in: ', user);
+    }else {
+        console.log('user logged out');
+    }
+    
+})
+
 
     // log in
     const loginForm = document.querySelector('#form-signin');

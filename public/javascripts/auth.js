@@ -1,3 +1,11 @@
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('user logged in: ', user);
+    }else {
+        console.log('user logged out');
+    }
+    
+})
 
 
 /* document.addEventListener('DOMContentLoaded', function () { */
@@ -16,6 +24,11 @@ const Form = document.querySelector('#form-signup');
         // sign up the user
         auth.createUserWithEmailAndPassword(email, password).then(cred => {
             //console.log(cred);
+            return db.collection('users').doc(cred.user.uid).set({
+                name: Form['name'].value
+            });
+            
+        }).then(() => {
             Form.reset(); 
         })
        // console.log(name, email, password, passwordR)
