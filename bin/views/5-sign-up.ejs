@@ -143,7 +143,7 @@
     <main class="product-general">
         <div id="logreg-forms">
             <form class="form-signin">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Sign Up</h1>
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"><%= title %></h1>
                 <div class="social-login">
                     <button class="btn facebook-btn social-btn" type="button">
                         <span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span>
@@ -154,13 +154,13 @@
                 </div>
             </form>
                 <p style="text-align:center">OR</p>
-                <form id="form-signup">
-                    <input type="text" id="name" class="form-control" placeholder="Full name" required />
-                    <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus="" />
-                    <input type="password" id="password" class="form-control" placeholder="Password" required autofocus="" />
-                    <input type="password" id="repeat-password" class="form-control" placeholder="Confirm Password" required autofocus="" />
+                <form id="form-signup" method="post" action="/signUp">
+                    <input type="text" name="name" class="form-control" placeholder="Full name" required />
+                    <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus="" />
+                    <input type="password" name="password" class="form-control" placeholder="Password" required autofocus="" />
+                    <input type="password" name="repeat-password" class="form-control" placeholder="Confirm Password" required autofocus="" />
                     <div class="input-group">
-                        <button class="btn btn-md btn-block submit" id="submit" type="submit">
+                        <button class="btn btn-md btn-block submit" name="submit" type="submit">
                             <i class="fas fa-user-plus"></i> Sign up new account
                         </button>
                     </div>
@@ -179,28 +179,6 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAQjj4Tm0tDFYgjAucFxrLJ0RRGrM-Qhq0",
-    authDomain: "helloworldtest-e4deb.firebaseapp.com",
-    databaseURL: "https://helloworldtest-e4deb.firebaseio.com",
-    projectId: "helloworldtest-e4deb",
-    
-    appId: "1:222966073974:web:2b29e80dd12900bd162d57",
-    measurementId: "G-56TWC4FKN4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 
-  // make auth and firestore reference
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-
-  // update firestore settings
-  db.settings({});
-</script>
-
-
+<script src="/bin/www.js"></script>
 <%- include('footer.ejs'); %>
