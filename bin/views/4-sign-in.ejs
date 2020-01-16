@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header.ejs'); %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
-    <!-- bootstrap css -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- font awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Favicons -->
-   <!--  <link href="#" rel="apple-touch-icon" sizes="180x180" />
-    <link href="#" rel="icon" sizes="32x32" type="image/png" />
-    <link href="#" rel="icon" sizes="16x16" type="image/png" />
-    <link href="#" rel="manifest" />
-    <link color="#563d7c" href="#" rel="mask-icon" />
-    <link href="#" rel="icon" /> -->
-    <!-- main css -->
-    <link href="stylesheets/style.css" rel="stylesheet" />
-   <!--  <link href="stylesheets/all.css" rel="stylesheet" />
-    <link href="stylesheets/counter.css" rel="stylesheet" /> -->
-    <style>
+   <style>
         /* body {
             width: 100%;
             height: auto;
@@ -160,65 +139,7 @@
         }
     </style>
 
-    <title>HWwinkerSignUp</title>
-</head>
 
-<body>
-
-    <header>
-        <!-- navbar  -->
-        <nav class="navbar navbar-expand-lg navbar-light px-4">
-            <a class="navbar-brand" href="#"><img alt="logo" src="img/logo.svg" style="width: 15px; height: 15px;"></a>
-            <button class="navbar-toggler" data-target="#myNav" data-toggle="collapse" type="button">
-                    <span class="toggler-icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </button>
-            <div class="collapse navbar-collapse navbar-light" id="myNav">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item active mx-lg-4">
-                        <a class="nav-link" href="1-index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="nav-link " href="8-product-store.html">Store</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="nav-link" href="7-contact.html">Contact</a>
-                    </li>
-                </ul>
-                <!-- info in the left -->
-                <div class="nav-info-items d-none d-md-flex ">
-                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="btn btn-sm btn-info rounded-pill ml-6" href="6-cart.html">
-                                    <i aria-hidden="true" class="fa fa-cart-arrow-down"></i> Your Cart</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="btn btn-sm btn-info rounded-pill text-light ml-6" href="4-sign-in.html">
-                                    <i class="fa fa-sign-in" aria-hidden="true"></i>Sign in</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-info align-items-center  d-flex justify-content-between mx-md-2" id="cart-info">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="btn btn-sm btn-danger rounded-pill text-light ml-6" href="5-sign-up.html">
-                                    <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Sign Up</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end info in the left -->
-                </div>
-            </div>
-        </nav>
-        <!-- end of nav -->
-    </header>
-    <!-- header -->
     <div class="product-general">
         <div id="logreg-forms">
             <form id="form-signin">
@@ -287,12 +208,4 @@
   db.settings({});
 </script>
 
-    <!-- bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="javascripts/auth2.js"></script>
-    
-</body>
-
-</html>
+<%- include('footer.ejs'); %>
