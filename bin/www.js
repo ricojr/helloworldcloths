@@ -38,7 +38,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 
@@ -56,7 +56,7 @@ console.log("hello");
 
 
 //  store page 
-app.get("/store", function(req, res){
+app.get("/store", function(req, res) {
 
   // render 8-product-store.ejs page as store route
   res.render(__dirname + "/views/8-product-store.ejs", {
@@ -66,7 +66,7 @@ app.get("/store", function(req, res){
 });
 
 //  men  page 
-app.get("/men", function(req, res){
+app.get("/men", function(req, res) {
 
   // render 2-product-men.ejs page as store route
   res.render(__dirname + "/views/2-product-men.ejs", {
@@ -88,17 +88,14 @@ app.get("/women", function(req, res){
 
 
 //  contact page 
-app.get("/contact", function(req, res){
+app.get("/contact", function(req, res) {
 
-  // render 7-contact.ejs page as contact route
-  res.render(__dirname + "/views/7-contact.ejs", {
-    title: "Shop men", 
-    para: "conten goes here"
-  })
-});
+    // render 7-contact.ejs page as contact route
+    res.render(__dirname + "/views/7-contact.ejs", { title: "Shop men", para: "conten goes here" })
+})
 
 //  cart page 
-app.get("/cart", function(req, res){
+app.get("/cart", function(req, res) {
 
   // render 6-cart.ejs page as cart route
   res.render(__dirname + "/views/6-cart.ejs", {
@@ -119,8 +116,16 @@ app.get("/signIn", function(req, res){
   })
 });
 
+
+//  Sign-in page 
+app.get("/signIn", function(req, res) {
+
+    // render 4-sign-in.ejs page as singIn route
+    res.render(__dirname + "/views/4-sign-in.ejs", { title: "SingUp", para: "conten goes here" })
+})
+
 //  Sign-up page 
-app.get("/signUp", function(req, res){
+app.get("/signUp", function(req, res) {
 
 
   // render 5-sign-un.ejs page as singUp route
@@ -171,7 +176,12 @@ app.post("/signUp", function(req, res){
   
 });
 
+app.get("/profile", function(req, res) {
 
-app.listen(port, function(){
-  console.log(`Server started at port: ${port}`);
+    // render 5-sign-un.ejs page as singUp route
+    res.render(__dirname + "/views/9-profile.ejs", { title: "Profile", para: "conten goes here" })
+})
+
+app.listen(port, function() {
+    console.log(`Server started at port: ${port}`);
 })

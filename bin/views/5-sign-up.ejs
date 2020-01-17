@@ -1,14 +1,6 @@
 <%- include('header.ejs'); %>
 
     <style>
-        /* .product-general {
-            width: 100%;
-            height: auto;
-            background: -webkit-linear-gradient(0deg, #3c96ff 0%, #2dceff 100%);
-            font-family: 'Bree Serif', serif;
-            font-size: 17px;
-        } */
-        
         #logreg-forms {
             width: 412px;
             margin: 10vh auto;
@@ -154,7 +146,6 @@
                 </div>
             </form>
                 <p style="text-align:center">OR</p>
-                // signUp form!!!!!!!!!
                 <form id="form-signup" method="post" action="/signUp">
                     <input type="text" name="name" class="form-control" placeholder="Full name" required />
                     <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus="" />
@@ -172,14 +163,15 @@
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+    <script src="/bin/www.js"></script>
 
 
-<script src="/bin/www.js"></script>
 <%- include('footer.ejs'); %>
