@@ -154,11 +154,11 @@
                 </div>
             </form>
                 <p style="text-align:center">OR</p>
-                <form id="form-signup">
-                    <input type="text" id="name" class="form-control" placeholder="Full name" required />
-                    <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus="" />
-                    <input type="password" id="password" class="form-control" placeholder="Password" required autofocus="" />
-                    <input type="password" id="repeat-password" class="form-control" placeholder="Confirm Password" required autofocus="" />
+                <form id="form-signup" method="post" action="/signUp">
+                    <input type="text" name="name" class="form-control" placeholder="Full name" required />
+                    <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus="" />
+                    <input type="password" name="password" class="form-control" placeholder="Password" required autofocus="" />
+                    <input type="password" name="repeat-password" class="form-control" placeholder="Confirm Password" required autofocus="" />
                     <div class="input-group">
                         <button class="btn btn-md btn-block submit" id="submit" type="submit">
                             <i class="fas fa-user-plus"></i> Sign up new account
@@ -178,40 +178,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCafGFY62Xw5LV2ikv0ALXp4GEmrXZUbgY",
-    authDomain: "helloworldclothes-app.firebaseapp.com",
-    databaseURL: "https://helloworldclothes-app.firebaseio.com",
-    projectId: "helloworldclothes-app",
-    storageBucket: "helloworldclothes-app.appspot.com",
-    messagingSenderId: "250508679608",
-    appId: "1:250508679608:web:06f8236c7b3767d986174d",
-    measurementId: "G-KJP8WSK61Q"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  // make auth and firestore reference
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-
-  // update firestore settings
-  db.settings({});
-</script>
-<<<<<<< HEAD
-    <!-- bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="public/javascripts/auth.js"></script>
-   
-</body>
-=======
->>>>>>> e9ceea54946c7ff1ce88c4b170c82a24a45aaed7
+<script src="/bin/www.js"></script>
 
 
 <%- include('footer.ejs'); %>

@@ -31,7 +31,7 @@ const Form = document.querySelector('#form-signup');
         }).then(() => {
             Form.reset(); 
         })
-       // console.log(name, email, password, passwordR)
+       console.log(email, password)
     })
 
     // log out
