@@ -121,11 +121,16 @@ app.get("/signIn", function(req, res){
 
 //  Sign-up page 
 app.get("/signUp", function(req, res){
+
+
   // render 5-sign-un.ejs page as singUp route
   res.render(__dirname + "/views/5-sign-up.ejs", {
-    title: "SingIn", 
+    title: "singUp", 
     para: "conten goes here"
   })
+
+
+
 });
 
 app.post("/signUp", function(req, res){
