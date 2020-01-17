@@ -9,7 +9,6 @@ auth.onAuthStateChanged(user => {
 
 
 /* document.addEventListener('DOMContentLoaded', function () { */
-
 const Form = document.querySelector('#form-signup');
    
     Form.addEventListener('submit', (e) => {
